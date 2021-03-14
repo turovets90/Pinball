@@ -1,0 +1,224 @@
+.container
+    .row
+        .col.page_content
+            .title
+                .title_content
+                    .h1 Seasons standings
+
+            .sort_box
+                div.item
+                    select.custom_select
+                        -for(var s=1;s<=3;s++)
+                            option Winter 200#{s}
+                div.item
+                    .switcher.play-off
+                        span.text REGULAR
+                        .switcher_wrapper
+                            .tumbler
+                        span.text PLAY-OFF
+            .sort.j_center
+                -var sort1=['','Semi Final 1','Semi Final 2','Final'];
+                ul.sort_nav.mb_30
+                    -for (var sn1 = 1; sn1 <= 3; sn1++)
+                        if sn1 === 3
+                            li.active
+                                a(href="#")=sort1[sn1]
+                        else
+                            li
+                                a(href="#")=sort1[sn1]
+            -var th1=['Player','Game 1','Game 2','Game 3','GW'];
+            .table_box.mb_20
+                table.table_play-off
+                    thead
+                        tr
+                            for th1_item, index in th1
+                                th=th1_item
+                    tdody
+                        -for (var tr1 = 1; tr1 <= 10; tr1++)
+                            if tr1===1
+                                tr
+                                    td
+                                        strong Game
+                                    td
+                                        strong (2) Wayne
+                                    td
+                                        strong (4) Jenny
+                                    td
+                                        strong Winner
+                                    td
+                                        strong Series
+                            else
+                                tr
+                                    td Addams
+                                    td 11,702,300
+                                    td 66,762,860
+                                    td (4)Jenny
+                                    if tr1===3
+                                        td
+                                            b Wayne: 5
+                                    else
+                                        td Wayne: 4
+
+
+
+            small Standings based on Matches Won. GW (Games Won) is the tie-breaker. * Clinched playoff spot. ^ Clinched 1st Place
+
+            .title.b_0
+                .title_content
+                    .h2 Week
+
+                    select.custom_select
+                        -for (var s = 1; s <= 3; s++)
+                                option 2 of 8 — November 10th, 202#{s}
+
+            .sort.j_center
+                ul.sort_nav
+                    -for(var sn=1;sn<=5;sn++)
+                        if sn===1
+                            li.active
+                                a(href="#") Matchup #{sn}
+                        else
+                            li
+                                a(href="#") Matchup #{sn}
+            .main_widjets
+                .row
+                    -for(var mw=1;mw<=5;mw++)
+                        .col.main_widjets_item
+                            .main_widjets_item_title Avengers: Infinity Quest
+                            .table_box
+                                table.widjet_table
+                                    thead
+                                        tr
+                                            th Player
+                                            th Game 1
+                                            th Game 2
+                                            th Game 3
+                                    tbody
+                                        tr
+                                            td
+                                                strong Mayar Sauron
+                                                span.count.green 2
+                                            td
+                                                strong 50,000,000
+                                            td 142,355,720
+                                            td
+                                                strong 23,642,810
+                                        tr
+                                            td Matt Szewczyk
+                                                span.count.red 1
+                                            td 37,186,224
+                                            td
+                                                strong 4,642,899
+                                            td —
+                .j_center
+                    a.btn.btn_red.show_more(href="#") All standings
+
+            .content
+                .title.b_0
+                    .title_content
+                        .h1.text_center Competition and Rules
+
+
+                p The Regular Season runs for eight (8) weeks. Each week, players will face off in four (4) best-of-three matchups (you will play a minimum of 8 games and a maximum of 12 games each week).
+
+                p League entry fee is $40 per season. There is no other fee to play. All fees go towards the prize fund, which is $400.
+
+                p Each matchup, players will face a different randomly chosen opponent on a randomly chosen machine. The system attempts to assign games and opponents as evenly as possible. Next week's matchups are posted on Thursday or Friday.
+
+                p If a player does not play in a given week, they forfeit all matchups that week. Players who know of their pending absence may pre-play in advance up to (2) weeks in a season, between Weds-Mon preceding the week they will be absent, based on the league commissioner's availability.
+
+                .scoring
+                    .row
+                        .col
+                            .item
+                                strong Season Scoring:
+                                p Standings are based on matches won (You can earn up to 4 wins per week)
+                        .col
+                            img(src="img/bgs/Silver-Ballers-logo.svg")
+                        .col
+                            .item
+                                strong Weekly Scoring:
+                                p Players earn a match win for each best-of-three match won
+
+
+                p <strong>Tie Breakers:</strong> Games won within each matchup are tracked, and represent the tie breaker in the standings, when necessary.
+
+                p Additional tiebreakers in order:
+
+                p 1. Head-to-Head Wins       2. Head-to-Head GW       3. Wins vs. Top 3       4. GW vs. Top 3       5. Rock, Paper, Scissors
+
+                .final_battle
+                    .h2.text_center The Final Battle and Payouts
+                    .row
+                        .col
+                            .item
+                                .name GRAND CHAMPION
+                                .price $250
+                                p The first player to 5 wins in the Championship Match
+                        .col
+                            .item
+                                .name RUNNER-UP
+                                .price $100
+                                p The player who loses the Championship Match
+                        .col
+                            .item
+                                .name FIRST PLACE
+                                .price $50
+                                p The player who finishes in 1st place in the regular season
+
+
+                p The top 4 players in the standings at the end of the season will qualify for The Final Battle (aka playoffs). The Final Battle takes place the week following the end of the Regular Season.
+
+                p In The Final Battle, it's 1st vs. 3rd seed and 2nd vs. 4th seed, facing off in a best of 7 matchup. Machines are chosen randomly by the league scheduler. The first player to 4 wins in each series qualifies for the Championship Match. The higher seed chooses player order for each game.
+
+                p The Championship Match is a best of 9 battle with the first 3 games chosen by the lowest (worst) seed, and the remaining 6 chosen by the higher seed. No game may be chosen more than twice. The player that doesn't choose the game chooses player order.
+
+
+
+
+
+            .tutorials
+                .h1.text_center Tips & Tutorials
+                .sub_title.text_center All-Time League
+                .row
+                    -for(var v=1;v<=6;v++)
+                        .col
+                            .item
+                                iframe(src="https://www.youtube.com/embed/6hCR8g-bmgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                                .item_title Avengers: Infinity Quest
+                .j_center
+                    a.btn.btn_red.show_more(href="#") Show more
+
+        .col.aside
+            .aside_content.p_20
+                .h1 Highest Scores
+                .sub_title All-Time League
+                hr
+                -var w_title=['','Lord of the Rings','Avengers: Infinity Quest','The Shadow','Deadpool','Lord of the Rings','Avengers: Infinity Quest','The Shadow','Deadpool','Deadpool'];
+                -for(var w=1;w<=9;w++)
+                    .widjet
+                        .widjet_title=w_title[w]
+                        .table_box
+                            table.widjet_table
+                                thead
+                                    tr
+                                        th #
+                                        th Player
+                                        th Scores
+                                tbody
+                                    tr
+                                        td
+                                            img(src="img/icons/cup_gold.svg")
+                                        td Mayar Sauron
+                                        td 50,000,000
+                                    tr
+                                        td
+                                            img(src="img/icons/cup_bronze.svg")
+                                        td Matt Szewczyk
+                                        td 37,186,224
+                                    tr
+                                        td
+                                            img(src="img/icons/cup_silver.svg")
+                                        td Melissa Brailsford
+                                        td 16,450,191
+
