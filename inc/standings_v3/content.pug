@@ -8,7 +8,8 @@
                         .tumbler
                     span.text PLAY-OFF
             -var th1=['#','Player','Wins','GW','Last WK'];
-            .table_box.mb_115
+            -var th2=['#','Iron Maiden','Score'];
+            .table_box.mb_20
                 table.table_regular
                     thead
                         tr
@@ -22,85 +23,37 @@
                                 td #{tr1}0
                                 td 2#{tr1}
                                 td #{tr1} - 0
-            .sort_box.two_select
-                div.item.d_flex
-                    .title
-                        .title_content
-                            .h1 Choose opponent
-                    select.custom_select
-                        -for (var s = 1; s <= 3; s++)
-                                option Liv Tyler #{s}
-                div.item
-                    select.custom_select
-                        -for (var s = 1; s <= 3; s++)
-                            option Avengers #{s}
+            .main_widjets.b_0.pb_0
+                .h1 Highest Scores
+                .sub_title All-Time league
+                .row
+                    -for (var mw = 1; mw <= 10; mw++)
+                        .col.main_widjets_item.regular
+                            .table_box
+                                table.table_regular
+                                    thead
+                                        tr
+                                            for th2_item, index in th2
+                                                th=th2_item
+                                    tdody
+                                        -for (var tr1 = 1; tr1 <= 3; tr1++)
+                                            tr
+                                                td #{tr1}
+                                                td Mike Ramos
+                                                td 347,756,096
 
-            -var th1 = ['Player', 'Game 1', 'Game 2', 'Game 3', 'GW'];
-            .table_box.mb_20
-                table.table_play-off
-                    thead
-                        tr
-                            for th1_item, index in th1
-                                th=th1_item
-                    tdody
-                        -for (var tr1 = 1; tr1 <= 5; tr1++)
-                            tr
-                                td(colspan="5")
-                                    b 3 of 8 - November 10th, 2020
-                            tr
-                                td
-                                    strong Matt S.
-                                td
-                                    strong 142,735,070
-                                td
-                                    strong 27,455,800
-                                td
-                                td
-                                    strong 2
-                            tr
-                                td Live T.
-                                td 4,715,940
-                                td 8,762,860
-                                td
-                                td 0
-                            tr
-                                td Avengers
-                                td Score
-                                td Score
-                                td Score
-                                td
-            .j_center.pt_20
-                a.btn.btn_red.show_more(href="#") Show more
 
 
 
         .col.aside
+            .h1.text_center Player standings
+            select.custom_select
+                -for (var s = 1; s <= 3; s++)
+                    option Matt Szewczyk #{s}
+
             .aside_content.p_20
-                .h1 Matt Szewczyk
-                .sub_title All-Time records
-                hr
                 .widjet
-                    .widjet_title Highscores
-                    select.custom_select
-                        -for (var s = 1; s <= 3; s++)
-                            option Avengers #{s}
-                    .table_box
-                        table.widjet_table
-                            thead
-                                tr
-                                    th #
-                                    th Player
-                                    th Scores
-                            tbody
-                                -for(var tr4=1;tr4<=3;tr4++)
-                                    tr
-                                        td #{tr4}
-                                        td Matt Szewczyk
-                                        td 50,000,000
-                    .j_center.pt_20
-                        a.btn.btn_red.show_more(href="#") Show more
-                .widjet
-                    .widjet_title Average scores
+                    .widjet_title.mt_0 Average scores
                     .table_box
                         table.widjet_table
                             thead
@@ -117,11 +70,8 @@
                     .j_center.pt_20
                         a.btn.btn_red.show_more(href="#") Show more
             .aside_content.p_20
-                .h1 Highest Scores
-                .sub_title All-Time League
-                hr
                 .widjet
-                    .widjet_title
+                    .widjet_title.mt_0 Highscores
                     select.custom_select
                         -for (var s = 1; s <= 3; s++)
                             option Avengers #{s}

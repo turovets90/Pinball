@@ -988,9 +988,24 @@ small
     font-size: 12px
 
 
-
+.mt_0
+  margin-top: 0 !important
 hr
   border: 1px solid #E6E7EA
+.aside
+  > h1, > .h1
+    margin-bottom: 16px
+    margin-top: 16px
+    @media (max-width: 1200px)
+      margin-bottom: 20px
+  > .select2
+    margin-bottom: 33px
+  .select2
+    width: 100% !important
+    max-width: 100%
+  .select2-container--default
+    .select2-selection--single
+      max-width: 100%
 
 .aside_content
   text-align: center
@@ -1006,12 +1021,8 @@ hr
     font-weight: 300
     margin-bottom: 23px
 
-  .select2
-    width: 100% !important
-    max-width: 100%
   .select2-container--default
     .select2-selection--single
-      max-width: 100%
       border-bottom: 0
   .widjet
     padding-bottom: 33px
@@ -1019,6 +1030,7 @@ hr
       padding-bottom: 20px
 
   hr
+    border: 0
     border-bottom: 1px solid #E6E7EA
   .widjet_title
     margin: 40px 0 20px
@@ -1097,6 +1109,11 @@ hr
   @media (max-width: 1100px)
     width: 100%
 
+  &.regular
+    margin-bottom: 20px
+    .table_box
+      padding: 5px
+      +box-shadow(none)
   .table_box
     padding: 10px
     +box-shadow(0px 4px 15px rgba(0, 0, 0, 0.1))
@@ -1299,12 +1316,47 @@ hr
 
 .pt_20
   padding-top: 20px
-
+.p_0
+  padding: 0 !important
 .pt_50
   padding-top: 50px
   @media (max-width: 1380px)
     padding-top: 30px
 .switcher_full_width
   margin-bottom: 40px
+  @media (max-width: 1380px)
+    margin-bottom: 30px
+
   .switcher
     +j-center
+.pb_0
+  padding-bottom: 0 !important
+.b_0
+  border: 0
+
+
+.main_widjets
+  table
+    &.table_regular
+      @media (max-width: 575px)
+        min-width: initial
+
+  h1, .h1
+    text-align: center
+    padding-top: 30px
+    margin-bottom: 5px
+  .sub_title
+    text-align: center
+    font-size: 24px
+    line-height: 1.2
+    margin-bottom: 30px
+    @media (max-width: 1380px)
+      font-size: 22px
+      margin-bottom: 20px
+    @media (max-width: 1200px)
+      font-size: 20px
+    @media (max-width: 767px)
+      font-size: 18px
+
+    @media (max-width: 575px)
+      font-size: 16px
