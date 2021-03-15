@@ -585,6 +585,14 @@ footer
     h1, .h1
       &:before
         display: none
+  &.full_width
+    @media (min-width: 1381px)
+      margin-bottom: 50px
+    @media (max-width: 1100px)
+      h1, .h1
+        width: 100%
+        margin-bottom: 30px
+        text-align: center
   &:before
     +b_a
     width: 100%
@@ -641,9 +649,41 @@ footer
   +ai-center
   +j-beetween
   +wrap
+  &.two_select
+    .select2
+      max-width: 270px
+    .item
+      width: auto
+      @media (max-width: 1100px)
+        width: 100%
   .item
     width: 50%
+    &.d_flex
+      +flex
+      +ai-center
+      @media (max-width: 1100px)
+        +wrap
+      .h2, h2, .h1, h1
+        margin-bottom: 0
+        padding-top: 0
+        margin-right: 20px
+        @media (max-width: 1100px)
+          width: 100%
+          text-align: center
+          margin-right: 0
+          margin-bottom: 20px
+
+
+
+
+    &:first-child
+      width: 65%
+      @media (max-width: 1100px)
+        width: 100%
     &:last-child
+      width: 35%
+      @media (max-width: 1100px)
+        width: 100%
       @media (min-width: 1101px)
         +flex
         +j-end
@@ -657,11 +697,18 @@ footer
       margin-bottom: 20px
       +flex
       +j-center
+  .title
+    width: auto
+    margin: 30px 0
+    .title_content
+      padding: 0
+
 
 .switcher
   +flex
   +ai-center
   .text
+
     &:first-of-type
       color: $blue
 
@@ -679,6 +726,9 @@ footer
     font-size: 16px
     font-weight: 700
     text-transform: uppercase
+    white-space: nowrap
+    @media (max-width: 1200px)
+      font-size: 14px
   .switcher_wrapper
     width: 56px
     height: 32px
@@ -688,6 +738,8 @@ footer
     margin: 0 23px
     cursor: pointer
     padding: 3px
+    @media (max-width: 1200px)
+      margin: 0 10px
     .tumbler
       width: 26px
       height: 26px
@@ -758,7 +810,7 @@ footer
   //width: auto !important
   width: 100%  !important
   max-width: 330px
-  @media (max-width: 1200px)
+  @media (max-width: 1380px)
     width: auto !important
     max-width: initial
 
@@ -829,7 +881,12 @@ table
       //display: block
       overflow: auto
       min-width: 600px
+    tbody
+      tr
+        &:hover
+          background: #F6F1F1
     tr
+
       th, td
         //width: 150px
         &:nth-child(1)
@@ -938,16 +995,28 @@ hr
 .aside_content
   text-align: center
   +box-shadow($shadow)
-  padding-bottom: 45px
+  margin-bottom: 45px
   padding-top: 45px
   @media (max-width: 1380px)
-    padding-bottom: 30px
+    margin-bottom: 30px
     padding-top: 30px
   h1, .h1
     margin-bottom: 8px
   .sub_title
     font-weight: 300
     margin-bottom: 23px
+
+  .select2
+    width: 100% !important
+    max-width: 100%
+  .select2-container--default
+    .select2-selection--single
+      max-width: 100%
+      border-bottom: 0
+  .widjet
+    padding-bottom: 33px
+    @media (max-width: 1380px)
+      padding-bottom: 20px
 
   hr
     border-bottom: 1px solid #E6E7EA
@@ -1219,3 +1288,14 @@ hr
           margin-bottom: 20px
         &:last-child
           margin-bottom: 4px
+
+
+.mb_115
+  margin-bottom: 115px
+  @media (max-width: 1380px)
+    margin-bottom: 80px
+  @media (max-width: 1200px)
+    margin-bottom: 50px
+
+.pt_20
+  padding-top: 20px
