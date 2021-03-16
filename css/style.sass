@@ -899,6 +899,13 @@ table
         &:nth-child(3), &:nth-child(4), &:nth-child(5)
           @media (min-width: 1201px)
             width: 150px
+
+    &.table_stats
+      th, td
+        @media (min-width: 1201px)
+          &:first-child
+            min-width: 155px
+
   &.widjet_table
     thead
       background: $bg_grey
@@ -1004,20 +1011,29 @@ hr
   > .select2
     margin-bottom: 33px
   .select2
-    width: 100% !important
-    max-width: 100%
+  width: 100% !important
+  max-width: 100%
   .select2-container--default
     .select2-selection--single
       max-width: 100%
 
+.aside
+
+  .widjet
+    padding-bottom: 27px
+    @media (max-width: 1380px)
+      padding-bottom: 20px
+  .aside_content
+    margin-bottom: 45px
+    padding-top: 45px
+    @media (max-width: 1380px)
+      margin-bottom: 30px
+      padding-top: 30px
+
+
 .aside_content
   text-align: center
   +box-shadow($shadow)
-  margin-bottom: 45px
-  padding-top: 45px
-  @media (max-width: 1380px)
-    margin-bottom: 30px
-    padding-top: 30px
   h1, .h1
     margin-bottom: 8px
   .sub_title
@@ -1027,10 +1043,13 @@ hr
   .select2-container--default
     .select2-selection--single
       border-bottom: 0
-  .widjet
-    padding-bottom: 33px
-    @media (max-width: 1380px)
-      padding-bottom: 20px
+  .select2
+    width: 100% !important
+    max-width: 100%
+  .select2-container--default
+    .select2-selection--single
+      max-width: 100%
+
 
   hr
     border: 0
@@ -1762,3 +1781,36 @@ form
 
 
 
+.title-filter
+  +flex
+  +ai-center
+  +j-beetween
+  +wrap
+  margin-bottom: 28px
+  .page_title
+    margin-bottom: 0
+    @media (max-width: 1100px)
+      width: 100%
+      margin-bottom: 10px
+  .filter
+    +flex
+    +ai-center
+
+    .h2, h2
+      white-space: nowrap
+      margin:  0 30px 0 0
+      padding: 0
+    .select2
+      @media (min-width: 1381px)
+        min-width: 270px
+
+
+.pb_40
+  padding-bottom: 40px
+
+
+.aside_left
+  .aside_content
+    margin-bottom: 40px
+    .widjet_title
+      margin-top: 0
