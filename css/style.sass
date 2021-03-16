@@ -364,6 +364,9 @@ header
   +flex
   +ai-center
   +j-end
+  .btn
+    @media (max-width: 575px)
+      padding: 5px 15px
 
 .btn
   display: inline-block
@@ -375,11 +378,11 @@ header
   padding: 15px 33px
   text-decoration: none
   @media (max-width: 1100px)
-    padding: 8px 20px
+    padding: 11px 20px
     font-size: 16px
   @media (max-width: 575px)
     font-size: 14px
-    padding: 5px 15px
+    //padding: 5px 15px
   &:hover, &:focus
     background: $blue_hover
     border: 1px solid $blue_hover
@@ -1443,3 +1446,267 @@ hr
       padding: 5px 50px
       @media (max-width: 767px)
         font-size: 14px
+
+
+
+.account_content
+  padding: 25px 10px 75px
+  @media (max-width: 1380px)
+    padding: 25px 10px 50px
+  @media (max-width: 767px)
+    padding: 25px 10px 40px
+  .aside_left
+    width: 21.5%
+    @media (max-width: 1380px)
+      width: 25%
+    @media (max-width: 1100px)
+      width: 100%
+  .main_right
+    width: 78.5%
+
+    @media (max-width: 1380px)
+      width: 75%
+    @media (max-width: 1100px)
+      width: 100%
+    @media (min-width: 1101px)
+      padding-left: 32px
+      padding-right: 32px
+
+.user_menu
+  margin-bottom: 30px
+  .user_menu_header
+    background: $blue
+    padding: 20px
+    +flex
+    +ai-center
+    color: #fff
+    font-size: 18px
+    line-height: 21px
+    font-weight: 700
+    @media (max-width: 1380px)
+      padding: 15px
+      font-size: 16px
+    @media (max-width: 1100px)
+      padding: 10px
+    .user_photo
+      margin-right: 10px
+  .user_menu_body
+    background: #F1F3F6
+    .nav
+      li
+        border-bottom: 1px solid $border_color
+        width: 100%
+        &.active
+          a
+            background: #CFDCEF
+            color: $blue
+            font-weight: 700
+            text-decoration: none
+        a
+          display: inline-block
+          width: 100%
+          padding: 15px 42px
+          color: $black
+          font-size: 14px
+          line-height: 16px
+          text-decoration: none
+          @media (max-width: 1380px)
+            padding: 15px 30px
+          @media (max-width: 1100px)
+            padding: 10px 20px
+          &:hover, &:focus
+            background: #CFDCEF
+            color: $blue
+            font-weight: 700
+            text-decoration: none
+
+
+.user_photo
+  width: 45px
+  min-width: 45px
+  height: 45px
+  background-size: cover
+  background-position: center
+  +border-radius(50%)
+
+
+form
+  label
+    font-size: 18px
+    font-weight: 500
+    line-height: 21px
+    color: #404046
+    margin-bottom: 10px
+    display: block
+    @media (max-width: 1380px)
+      font-size: 16px
+.fields_group
+  margin-bottom: 22px
+  .small_group
+    margin-left: -7px
+    margin-right: -7px
+    padding-bottom: 8px
+    @media (max-width: 1380px)
+      padding-bottom: 0
+    .col
+      padding-right: 7px
+      padding-left: 7px
+      width: 33.33%
+
+.field
+  margin-bottom: 12px
+  position: relative
+  picture
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 8px
+    margin: auto
+    width: 22px
+    +flex
+    +ai-center
+    +j-center
+    + .form_control
+      padding-left: 35px
+
+
+
+.form_control
+  width: 100%
+  height: 50px
+  padding-left: 11px
+  padding-right: 11px
+  border: 1px solid #E6E7EA
+  background: #fff
+  color: $black
+  font-size: 16px
+  font-family: $font
+  @media (max-width: 1380px)
+    height: 40px
+  &::-webkit-input-placeholder
+    color: $grey
+    font-size: 16px
+    font-family: $font
+
+  &::-moz-placeholder
+    color: $grey
+    font-size: 16px
+    font-family: $font
+  &::-ms-input-placeholder
+    color: $grey
+    font-size: 16px
+    font-family: $font
+  &:-moz-placeholder
+    color: $grey
+    font-size: 16px
+    font-family: $font
+  &:-ms-input-placeholder
+    color: $grey
+    font-size: 16px
+    font-family: $font
+
+
+
+.personal_information
+  max-width: 790px
+  .btn
+    width: 100%
+    max-width: 190px
+
+.personal_information_row
+  @media (min-width: 1101px)
+    margin-right: -16px
+    margin-left: -16px
+  &:last-of-type
+    margin-bottom: 15px
+  > .col
+    width: 50%
+    @media (max-width: 767px)
+      width: 100%
+    @media (min-width: 1101px)
+      padding-right: 16px
+      padding-left: 16px
+
+
+
+.page_title
+  margin-bottom: 28px
+
+
+
+.select2-container--default
+  .select2-selection--single
+    padding-left: 10px
+
+
+.select2-container--default
+  .select2-selection--single
+    .select2-selection__rendered
+      color: #A7A9AD
+      font-size: 16px
+      font-weight: 400
+
+
+.select2-container--default
+  .select2-selection--single
+    .select2-selection__arrow
+      background: #fff
+      b
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='0.808736' y1='1.41183' x2='5.51411' y2='7.88172' stroke='%23A7A9AD' stroke-width='2'/%3e%3cline y1='-1' x2='8' y2='-1' transform='matrix(-0.588172 0.808736 0.808736 0.588172 10.8818 2)' stroke='%23A7A9AD' stroke-width='2'/%3e%3c/svg%3e ")
+
+.select2-container--default
+  &.select2-container--open
+    .select2-selection--single
+      .select2-selection__arrow
+        b
+          +transform(rotate(-180deg))
+.select2-container
+  //width: auto !important
+  width: 100%  !important
+  max-width: 330px
+  @media (max-width: 1380px)
+    width: auto !important
+    max-width: initial
+
+
+
+.select2-dropdown
+  border: 1px solid #E6E7EA
+  +box-shadow(0px 7px 24px -6px rgba(0, 0, 0, 0.1))
+  border-radius: 0
+  .select2-results__options
+    max-height: 400px
+    background: #fff
+    &::-webkit-scrollbar
+      -webkit-appearance: none
+      width: 0
+    &::-webkit-scrollbar:vertical
+      width: 3px
+      background: #c6c8ca
+      border-radius: 3px
+    &::-webkit-scrollbar-thumb
+      border-radius: 3px
+      background-color: $blue
+    li
+      width: 100%
+      color: $black
+      //font-size: 14px/$f+rem
+      padding: 15px 17px
+      position: relative
+      white-space: nowrap
+      font-size: 18px
+      @media (max-width: 1380px)
+        font-size: 16px
+        padding: 10px
+      @media (max-width: 767px)
+        font-size: 14px
+      &:hover
+        background: rgba(22, 142, 196, 0.05)
+        color: $blue
+
+
+
+
+
+
+

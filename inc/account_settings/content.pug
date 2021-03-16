@@ -1,0 +1,75 @@
+.container.account_content
+    .row
+        .col.aside_left
+            .user_menu
+                .user_menu_header
+                    .user_photo(style="background-image:url(img/examples/Ellipse.png)")
+                    .user_name Matt Szewczyk
+                -var menu=['Settings','My stats','Schedule','Security','Logout'];
+                .user_menu_body
+                    ul.nav
+                        for user_nav_item, index in menu
+                            if user_nav_item===page.title
+                                li.active
+                                    a(href="#")=user_nav_item
+                            else
+                                li
+                                    a(href="#")=user_nav_item
+
+        .col.main_right
+            .h1.page_title My Account
+            form.personal_information
+                label Personal information
+                .row.personal_information_row
+                    .col
+                        .fields_group
+                            .field
+                                input.form_control(placeholder="Your first name *")
+                            .field
+                                input.form_control(placeholder="Your last name *")
+                            .field
+                                input.form_control(placeholder="Your middle name")
+                    .col
+                        .fields_group
+                            .field
+                                input.form_control(placeholder="Your e-mail *")
+                            .field
+                                input.form_control(placeholder="Your phone number")
+                .row.personal_information_row
+                    .col
+                        .fields_group
+                            label Date of birth
+                            .row.small_group
+                                .col
+                                    .field
+                                        input.form_control(placeholder="Day")
+                                .col
+                                    .field
+                                        select.custom_select
+                                            option Month
+                                            -for (var s = 1; s <= 3; s++)
+                                                option Month #{s}
+                                .col
+                                    .field
+                                        input.form_control(placeholder="Year")
+                        .fields_group
+                            label Where are you from
+                            .field
+                                input.form_control(placeholder="Town")
+                    .col
+                        .fields_group
+                            label Your social life
+                            .field.social
+                                picture
+                                    img(src="img/icons/facebook.svg")
+                                input.form_control(placeholder="Link")
+                            .field.social
+                                picture
+                                    img(src="img/icons/twitter.svg")
+                                input.form_control(placeholder="Link")
+                            .field.social
+                                picture
+                                    img(src="img/icons/instagram.svg")
+                                input.form_control(placeholder="Link")
+
+                button.btn.btn_red(type="submit") Save
