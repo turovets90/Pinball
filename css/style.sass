@@ -1612,6 +1612,31 @@ form
   .btn
     width: 100%
     max-width: 190px
+  &.saved
+    .form_control
+      background: #F1F3F6
+      border: 1px solid #D4D8DE
+    .select2-container--default
+      .select2-selection--single
+        background: #F1F3F6
+        color: $black
+        border: 1px solid #D4D8DE
+    .select2-container--default
+      .select2-selection--single
+        .select2-selection__arrow
+          background: #F1F3F6
+          color: $black
+    .select2-container--default
+      .select2-selection--single
+        .select2-selection__rendered
+          color: $black
+
+    .select2-container--default
+      .select2-selection--single
+        .select2-selection__arrow
+            b
+              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='0.808736' y1='1.41183' x2='5.51411' y2='7.88172' stroke='%2357575a' stroke-width='2'/%3e%3cline y1='-1' x2='8' y2='-1' transform='matrix(-0.588172 0.808736 0.808736 0.588172 10.8818 2)' stroke='%2357575a' stroke-width='2'/%3e%3c/svg%3e ")
+
 
 .personal_information_row
   @media (min-width: 1101px)
@@ -1633,79 +1658,106 @@ form
   margin-bottom: 28px
 
 
-
-.select2-container--default
-  .select2-selection--single
-    padding-left: 10px
-
-
-.select2-container--default
-  .select2-selection--single
-    .select2-selection__rendered
-      color: #A7A9AD
-      font-size: 16px
-      font-weight: 400
+form
+  .select2-container--default
+    .select2-selection--single
+      padding-left: 10px
 
 
-.select2-container--default
-  .select2-selection--single
-    .select2-selection__arrow
-      background: #fff
-      b
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='0.808736' y1='1.41183' x2='5.51411' y2='7.88172' stroke='%23A7A9AD' stroke-width='2'/%3e%3cline y1='-1' x2='8' y2='-1' transform='matrix(-0.588172 0.808736 0.808736 0.588172 10.8818 2)' stroke='%23A7A9AD' stroke-width='2'/%3e%3c/svg%3e ")
+  .select2-container--default
+    .select2-selection--single
+      .select2-selection__rendered
+        color: #A7A9AD
+        font-size: 16px
+        font-weight: 400
 
-.select2-container--default
-  &.select2-container--open
+
+  .select2-container--default
     .select2-selection--single
       .select2-selection__arrow
+        background: #fff
         b
-          +transform(rotate(-180deg))
-.select2-container
-  //width: auto !important
-  width: 100%  !important
-  max-width: 330px
-  @media (max-width: 1380px)
-    width: auto !important
-    max-width: initial
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='0.808736' y1='1.41183' x2='5.51411' y2='7.88172' stroke='%23A7A9AD' stroke-width='2'/%3e%3cline y1='-1' x2='8' y2='-1' transform='matrix(-0.588172 0.808736 0.808736 0.588172 10.8818 2)' stroke='%23A7A9AD' stroke-width='2'/%3e%3c/svg%3e ")
+
+  .select2-container--default
+    &.select2-container--open
+      .select2-selection--single
+        .select2-selection__arrow
+          b
+            +transform(rotate(-180deg))
+  .select2-container
+    //width: auto !important
+    width: 100%  !important
+    max-width: 330px
+    @media (max-width: 1380px)
+      width: auto !important
+      max-width: initial
 
 
 
-.select2-dropdown
-  border: 1px solid #E6E7EA
-  +box-shadow(0px 7px 24px -6px rgba(0, 0, 0, 0.1))
-  border-radius: 0
-  .select2-results__options
-    max-height: 400px
-    background: #fff
-    &::-webkit-scrollbar
-      -webkit-appearance: none
-      width: 0
-    &::-webkit-scrollbar:vertical
-      width: 3px
-      background: #c6c8ca
-      border-radius: 3px
-    &::-webkit-scrollbar-thumb
-      border-radius: 3px
-      background-color: $blue
+  .select2-dropdown
+    border: 1px solid #E6E7EA
+    +box-shadow(0px 7px 24px -6px rgba(0, 0, 0, 0.1))
+    border-radius: 0
+    .select2-results__options
+      max-height: 400px
+      background: #fff
+      &::-webkit-scrollbar
+        -webkit-appearance: none
+        width: 0
+      &::-webkit-scrollbar:vertical
+        width: 3px
+        background: #c6c8ca
+        border-radius: 3px
+      &::-webkit-scrollbar-thumb
+        border-radius: 3px
+        background-color: $blue
+      li
+        width: 100%
+        color: $black
+        //font-size: 14px/$f+rem
+        padding: 15px 17px
+        position: relative
+        white-space: nowrap
+        font-size: 18px
+        @media (max-width: 1380px)
+          font-size: 16px
+          padding: 10px
+        @media (max-width: 767px)
+          font-size: 14px
+        &:hover
+          background: rgba(22, 142, 196, 0.05)
+          color: $blue
+
+
+.fields_group
+  .social_links
     li
-      width: 100%
-      color: $black
-      //font-size: 14px/$f+rem
-      padding: 15px 17px
-      position: relative
-      white-space: nowrap
-      font-size: 18px
+      margin-bottom: 12px
+      height: 50px
+      +flex
+      +ai-center
+
       @media (max-width: 1380px)
-        font-size: 16px
-        padding: 10px
-      @media (max-width: 767px)
-        font-size: 14px
-      &:hover
-        background: rgba(22, 142, 196, 0.05)
-        color: $blue
+        height: 40px
+      a
+        +flex
+        +ai-center
+        color: $black
+        &:hover
+          span
+            color: $blue
+            text-decoration: none
 
-
-
+        picture
+          width: 22px
+          min-width: 22px
+          +flex
+          +ai-center
+          +j-center
+          margin-right: 12px
+        span
+          text-decoration: underline
 
 
 
