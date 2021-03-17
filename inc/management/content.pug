@@ -1,0 +1,116 @@
+.container.account_content
+    .row
+        .col.aside_left
+            .user_menu
+                .user_menu_header
+                    .user_photo(style="background-image:url(img/examples/Ellipse.png)")
+                    .user_name Matt Szewczyk
+                -var menu=['Settings','Management','Schedule','Security','Logout'];
+                .user_menu_body
+                    ul.nav
+                        for user_nav_item, index in menu
+                            if user_nav_item===page.title
+                                li.active
+                                    a(href="#")=user_nav_item
+                            else
+                                li
+                                    a(href="#")=user_nav_item
+
+        .col.main_right
+            .h1.page_title My Account
+            .sort_box
+                div.item.d_flex.has_btn
+                    .h2 Choose season
+                    select.custom_select
+                        -for (var s = 1; s <= 3; s++)
+                            option Summer 202#{s}
+                div.item
+                    .sort_btn_group
+                        a.btn.b_blue(href="#") Create new machine
+                        a.btn.btn_blue(href="#") New Season
+
+            ul.nav_tabs
+                li.act Machines
+                li Players
+                li Planning
+            .tab_content
+                .tab_pane.active
+                    -var th1 = ['Name', 'Long games', 'Broken', ''];
+                    .table_box.mb_20
+                        table.table_machines
+                            thead
+                                tr
+                                    for th1_item, index in th1
+                                        th=th1_item
+                            tdody
+                                -for (var tr1 = 1; tr1 <= 10; tr1++)
+                                    tr
+                                        td Avengers
+                                        td
+                                            .custom_checkbox
+                                                input(type="radio" name="checkbox_"+tr1+"" id="checkbox_"+tr1+"" checked)
+                                                label(for="checkbox_"+tr1+"")
+
+                                        td
+                                            .custom_checkbox
+                                                input(type="radio" name="checkbox_" + tr1 + "" id="checkbox_1" + tr1 + "")
+                                                label(for="checkbox_1" + tr1 + "")
+                                        td
+                                            button.btn.b_red.btn_delete Delete
+
+                    .j_center.pt_20
+                        a.btn.btn_red.btn_save(href="#") Save
+
+
+
+
+                .tab_pane
+                    -var th2 = ['#', 'Photo', 'First name', 'Last name',''];
+                    .table_box.mb_20
+                        table.table_players
+                            thead
+                                tr
+                                    for th2_item, index in th2
+                                        th=th2_item
+                            tdody
+                                -for (var tr2 = 1; tr2 <= 10; tr2++)
+                                    tr
+                                        td #{tr2}
+                                        td
+                                            .user_photo(style="background-image:url(img/examples/Ellipse.png)")
+                                        td Matt
+                                        td Szevczyk
+                                        td
+                                            button.btn.b_red.btn_delete Delete
+                    .j_center.pt_20
+                        a.btn.btn_red.btn_save(href="#") Save
+                .tab_pane
+                    .row.panning_row
+                        .col
+                            .important_information
+                                .h2 Important information
+                                p At this page you can automatically create games. Please ,make sure that all information in the tabs "Machines" and "Players" are correct.
+                                p Also check please the season in which you want to plan new games.
+                                p Below you can see the regular table. Please check it before creating play-off series.
+                                .btn_group
+                                    a.btn.btn_red(href="#") Start planning
+                                    a.btn.btn_red(href="#") Create play-off series
+                        .col
+                            -var th3 = ['#', 'Player', 'Wins', 'GW','Leak Wk'];
+                            .table_box.mb_20
+                                table.table_players
+                                    thead
+                                        tr
+                                            for th3_item, index in th3
+                                                th=th3_item
+                                    tdody
+                                        -for (var tr3 = 1; tr3 <= 10; tr3++)
+                                            tr
+                                                td #{tr3}
+                                                td Dave Cruddle
+                                                td 10
+                                                td 21
+                                                td 4 - 0
+
+
+
