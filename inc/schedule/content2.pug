@@ -1,0 +1,96 @@
+.container.account_content
+    .row
+        .col.aside_left
+            .user_menu
+                .user_menu_header
+                    .user_photo(style="background-image:url(img/examples/Ellipse.png)")
+                    .user_name Matt Szewczyk
+                -var menu=['Settings','My stats','Schedule','Security','Logout'];
+                .user_menu_body
+                    ul.nav
+                        for user_nav_item, index in menu
+                            if user_nav_item===page.title
+                                li.active
+                                    a(href="#")=user_nav_item
+                            else
+                                li
+                                    a(href="#")=user_nav_item
+
+        .col.main_right
+            .h1.page_title My Account
+
+            .h2.page_subtitle Upcoming games
+            .tab_content
+
+                -for(var g=1;g<=4;g++)
+                    .games_group
+                        .games_group_header
+                            .date
+                                picture
+                                    img(src="img/icons/calendar.svg")
+                                div.date_text Monday, 01 Mar 2021
+
+                        .games_group_body
+                            -for(var gm=1;gm<=1;gm++)
+                                .game_item_box(class=(g===1) ? 'active' : '')
+                                    .game_item
+                                        .game_item_header
+                                            .col_left Matchup 5 01:00 PM Avengers
+                                            .col_center
+                                                .players
+                                                    .player.first
+                                                        .player_photo(style="background-image:url(img/examples/Ellipse7.png)")
+                                                        .player_name Matt Szevczyk
+                                                    span.yellow VS
+                                                    .player.second
+                                                        .player_name Liv Tyler
+                                                        .player_photo(style="background-image:url(img/examples/Ellipse10.png)")
+                                            .col_right
+                                                if g===1
+                                                    button.btn.btn_pink.game_item_toggle Cancel
+
+                                        .game_item_body
+                                            .game_item_body_title.h2.text_left Please check the entered data very carefully before saving it
+                                            .game_row
+                                                .game_row_left.pt_0
+                                                    .highscore
+                                                        div
+                                                            .highscore_title HIGHSCORE
+                                                            .player_name Matt Szewczyk
+                                                            .result 1,308,494,420
+
+                                                .game_row_center
+                                                    .games_list
+                                                        .games_list_item.first
+                                                            .col_left Matt Szevczyk
+                                                            .col_center
+                                                            .col_right.text_right Liv Tyler
+                                                        -for(var i=1;i<=3;i++)
+                                                            .games_list_item
+                                                                .col_left
+                                                                    .progress_box
+                                                                        .text 463,827,235#{i}
+                                                                        .progress(style="width: 5"+i+"%")
+
+                                                                .col_center Game #{i}
+                                                                .col_right
+                                                                    .progress_box
+                                                                        .text 306,154,854#{i}
+                                                                        .progress(style="width: 7" + i + "%")
+
+
+                                                .game_row_right.pt_0
+                                                    .highscore
+                                                        div
+                                                            .highscore_title HIGHSCORE
+                                                            .player_name Liv Tyler
+                                                            .result 780,000,000
+                                            .game_btn_box.j_center
+                                                button.btn.b_red.mw_150 Edit
+
+
+
+
+
+
+

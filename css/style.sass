@@ -400,16 +400,29 @@ header
     &:hover, &:focus
       background: $red_hover
       border: 1px solid $red_hover
+  &.btn_pink
+    background: $pink
+    border: 1px solid $pink
+    &:hover, &:focus
+      background: $pink_hover
+      border: 1px solid $pink_hover
   &.show_more
     width: 100%
     max-width: 340px
     text-align: center
-  &.b_red
+  &.b_pink
     border: 1px solid $pink
     color: $pink
     background: none
     &:hover
       background: $pink
+      color: #fff
+  &.b_red
+    border: 2px solid $red
+    color: $red
+    background: none
+    &:hover
+      background: $red
       color: #fff
   &.b_blue
     border: 1px solid $blue
@@ -418,6 +431,18 @@ header
     &:hover
       background: $blue
       color: #fff
+
+  &.btn_green
+    border: 1px solid $green
+    color: #fff
+    background: $green
+    &:hover
+      background: $green_hover
+      border: 1px solid $green_hover
+      color: #fff
+  &.mw_150
+    width: 100%
+    max-width: 150px
 
 
 .mm_btn
@@ -1401,8 +1426,12 @@ hr
   @media (max-width: 1200px)
     margin-bottom: 50px
 
+.text_right
+  text-align: right
 .pt_20
   padding-top: 20px
+.pt_0
+  padding-top: 0 !important
 .p_0
   padding: 0 !important
 .pt_50
@@ -1968,6 +1997,13 @@ form
 
 .games_group
   padding-bottom: 25px
+  &:first-child
+    .games_group_body
+      .game_item_box
+        .game_item_header
+          background: #F1F3F6
+  &:last-child
+    padding-bottom: 0
   .games_group_header
     +flex
     +ai-center
@@ -2021,11 +2057,24 @@ form
       .game_item
         .game_item_header
           background: #F1F3F6
+          .col_center
+            .players
+              .player
+                .player_name
+                  color: $blue
+                  font-weight: 700
         .game_item_header
           .col_center
             .players
               > span
                 color: $red
+                &.yellow
+                  color: #FCCE19
+        .game_item_body
+          display: block
+
+
+
   .game_item
     min-width: 500px
     border: 1px solid #DBE0E8
@@ -2039,6 +2088,11 @@ form
         padding: 20px
       @media (max-width: 1200px)
         padding: 10px
+      .btn
+        width: 100%
+        max-width: 186px
+        font-size: 16px
+        font-weight: 700
       .col_left
         width: 25%
         color: #404046
@@ -2102,8 +2156,8 @@ form
               .player_name
                 text-align: right
             .player_name
-              color: $blue
-              font-weight: 700
+              color: $black
+              font-weight: 500
               max-width: 120px
               @media (max-width: 1200px)
                 font-size: 14px
@@ -2132,12 +2186,16 @@ form
   .game_item_body_title
     text-align: center
     padding-top: 5px
+    &.text_left
+      text-align: left
     @media (max-width: 575px)
       font-size: 16px
   .game_btn_box
     +flex
     +ai-center
     +j-beetween
+    &.j_center
+      +j-center
     .btn
       width: 100%
       max-width: 203px
@@ -2150,6 +2208,8 @@ form
       @media (max-width: 1200px)
         width: auto
         max-width: initial
+      &.mw_150
+        max-width: 150px
 
 
       .btn_red
@@ -2205,6 +2265,32 @@ form
             font-size: 14px
             margin-bottom: 3px
 
+        .progress_box
+          height: 40px
+          width: 100%
+          +flex
+          +j-end
+          +wrap
+          +col
+          .text
+            color: #404046
+            font-size: 16px
+            font-weight: 400
+            width: 100%
+            margin-bottom: 6px
+            @media (max-width: 1380px)
+              font-size: 14px
+            @media (max-width: 1100px)
+              font-size: 12px
+              margin-bottom: 0
+          .progress
+            height: 10px
+            background: $blue
+            +border-radius(9px 0 9px 0)
+            @media (max-width: 1380px)
+              height: 8px
+
+
         .col_left
           width: 40%
         .col_center
@@ -2222,6 +2308,13 @@ form
 
         .col_right
           width: 40%
+          .progress_box
+            +ai-end
+            text-align: right
+            .progress
+              height: 10px
+              background: $blue
+              +border-radius(0 9px 0 9px)
 
     .highscore
       background: #F1F3F6
@@ -2477,3 +2570,11 @@ table
       width: 53.4%
       @media (max-width: 1100px)
         width: 100%
+
+
+.page_subtitle
+  margin-bottom: 18px
+  padding-top: 0
+
+
+
