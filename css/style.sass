@@ -607,7 +607,7 @@ footer
       a
         color: #fff
         &:hover
-          color: $black
+          color: $red
           text-decoration: underline
 
 
@@ -620,6 +620,7 @@ footer
     padding-bottom: 30px
   @media (max-width: 1100px)
     width: 100%
+    order: 2
 .aside
   width: 29%
   @media (max-width: 1380px)
@@ -628,6 +629,7 @@ footer
     padding-bottom: 30px
   @media (max-width: 1100px)
     width: 100%
+    order: 1
 .title
   +flex
   +ai-center
@@ -770,6 +772,15 @@ footer
     .title_content
       padding: 0
 
+.switcher_tabs
+
+  .tab_play-off
+    display: none
+  &.act
+    .tab_regular
+      display: none
+    .tab_play-off
+      display: block
 
 .switcher
   +flex
@@ -779,7 +790,7 @@ footer
     &:first-of-type
       color: $blue
 
-  &.play-off
+  &.act
     .text
       &:first-of-type
         color: $black

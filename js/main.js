@@ -12,7 +12,8 @@ $(document).ready(function(){
     });
 
     $('.switcher_wrapper').click(function(){
-        $(this).parent().toggleClass('play-off');
+        $(this).parent().toggleClass('act');
+        $('.switcher_tabs').toggleClass('act');
     });
 
 
@@ -49,6 +50,9 @@ $(document).ready(function(){
     });
 
     $('.time').mask('00:00');
+
+
+
 
 });
 

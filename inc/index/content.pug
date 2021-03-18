@@ -25,21 +25,71 @@
                         .switcher_wrapper
                             .tumbler
                         span.text PLAY-OFF
-            -var th1=['#','Player','Wins','GW','Last WK'];
-            .table_box.mb_20
-                table.table_regular
-                    thead
-                        tr
-                            for th1_item, index in th1
-                                th=th1_item
-                    tdody
-                        -for (var tr1 = 1; tr1 <= 10; tr1++)
-                            tr
-                                td #{tr1}
-                                td Dave Crudele
-                                td #{tr1}0
-                                td 2#{tr1}
-                                td #{tr1} - 0
+
+            .switcher_tabs
+                .tab_regular
+                    -var th1 = ['#', 'Player', 'Wins', 'GW', 'Last WK'];
+                    .table_box.mb_20
+                        table.table_regular
+                            thead
+                                tr
+                                    for th1_item, index in th1
+                                        th=th1_item
+                            tdody
+                                -for (var tr1 = 1; tr1 <= 10; tr1++)
+                                    tr
+                                        td #{tr1}
+                                        td Dave Crudele
+                                        td #{tr1}0
+                                        td 2#{tr1}
+                                        td #{tr1} - 0
+                .tab_play-off
+                    .sort.j_center
+                        -var sort1 = ['', 'Semi Final 1', 'Semi Final 2', 'Final'];
+                        ul.sort_nav.mb_30
+                            -for (var sn1 = 1; sn1 <= 3; sn1++)
+                                if sn1 === 3
+                                    li.active
+                                        a(href="#")=sort1[sn1]
+                                else
+                                    li
+                                        a(href="#")=sort1[sn1]
+                    -var th2 = ['Player', 'Game 1', 'Game 2', 'Game 3', 'GW'];
+                    .table_box.mb_20
+                        table.table_play-off
+                            thead
+                                tr
+                                    for th2_item, index in th2
+                                        th=th2_item
+                            tdody
+                                -for (var tr2 = 1; tr2 <= 10; tr2++)
+                                   if tr2 === 1
+                                       tr
+                                           td
+                                               strong Game
+                                           td
+                                               strong (2) Wayne
+                                           td
+                                               strong (4) Jenny
+                                           td
+                                               strong Winner
+                                           td
+                                               strong Series
+                                   else
+                                       tr
+                                           td Addams
+                                           td 11,702,300
+                                           td 66,762,860
+                                           td (4)Jenny
+                                           if tr1 === 3
+                                               td
+                                                   b Wayne: 5
+                                           else
+                                               td Wayne: 4
+
+
+
+
             small Standings based on Matches Won. GW (Games Won) is the tie-breaker. * Clinched playoff spot. ^ Clinched 1st Place
 
             .title.b_0
@@ -163,7 +213,7 @@
                     -for(var v=1;v<=6;v++)
                         .col
                             .item
-                                iframe(src="https://www.youtube.com/embed/6hCR8g-bmgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                                iframe(src="https://www.youtube.com/embed/6hCR8g-bmgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="scroll" allowfullscreen)
                                 .item_title Avengers: Infinity Quest
                 .j_center
                     a.btn.btn_red.show_more(href="#") Show more
