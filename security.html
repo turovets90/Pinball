@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Settings</title>
+    <title>Security</title>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -68,10 +68,10 @@
             </div>
             <div class="user_menu_body">
               <ul class="nav">
-                <li class="active"><a href="#">Settings</a></li>
+                <li><a href="#">Settings</a></li>
                 <li><a href="#">My stats</a></li>
                 <li><a href="#">Schedule</a></li>
-                <li><a href="#">Security</a></li>
+                <li class="active"><a href="#">Security</a></li>
                 <li><a href="#">Logout</a></li>
               </ul>
             </div>
@@ -79,95 +79,22 @@
         </div>
         <div class="col main_right">
           <div class="h1 page_title">My Account</div>
-          <form class="personal_information">
-            <label>Personal information</label>
-            <div class="row personal_information_row">
-              <div class="col">
-                <div class="fields_group">
-                  <div class="field">
-                    <input class="form_control" placeholder="Your first name *"/>
-                  </div>
-                  <div class="field">
-                    <input class="form_control" placeholder="Your last name *"/>
-                  </div>
-                  <div class="field">
-                    <input class="form_control" placeholder="Your middle name"/>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="fields_group">
-                  <div class="field">
-                    <input class="form_control" placeholder="Your e-mail *"/>
-                  </div>
-                  <div class="field">
-                    <input class="form_control" placeholder="Your phone number"/>
-                  </div>
-                </div>
-              </div>
+          <div class="h2 page_subtitle">Important information</div>
+          <p>At this page you can change your password. If you don't remember your old password you can't create new one. You need to contact the administrator of the web-site by e-mail: help@pinball.com.</p>
+          <p class="blue"><strong>Password must contains at least 1 letter, a number or symbol, at least 6 characters.</strong></p>
+          <form class="form_security">
+            <div class="field">
+              <input class="form_control" type="text" value="Old password"/>
             </div>
-            <div class="row personal_information_row">
-              <div class="col">
-                <div class="fields_group">
-                  <label>Date of birth</label>
-                  <div class="row small_group">
-                    <div class="col">
-                      <div class="field">
-                        <input class="form_control" placeholder="Day"/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="field">
-                        <select class="custom_select">
-                          <option>Month</option>
-                          <option> 1</option>
-                          <option> 2</option>
-                          <option> 3</option>
-                          <option> 4</option>
-                          <option> 5</option>
-                          <option> 6</option>
-                          <option> 7</option>
-                          <option> 8</option>
-                          <option> 9</option>
-                          <option> 10</option>
-                          <option> 11</option>
-                          <option> 12</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="field">
-                        <input class="form_control" placeholder="Year"/>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="fields_group">
-                  <label>Where are you from</label>
-                  <div class="field">
-                    <input class="form_control" placeholder="Town"/>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="fields_group">
-                  <label>Your social life</label>
-                  <div class="field social">
-                    <picture><img src="img/icons/facebook.svg"/></picture>
-                    <input class="form_control" placeholder="Link"/>
-                  </div>
-                  <div class="field social">
-                    <picture><img src="img/icons/twitter.svg"/></picture>
-                    <input class="form_control" placeholder="Link"/>
-                  </div>
-                  <div class="field social">
-                    <picture><img src="img/icons/instagram.svg"/></picture>
-                    <input class="form_control" placeholder="Link"/>
-                  </div>
-                </div>
-              </div>
+            <div class="field">
+              <input class="form_control" type="text" value="New password"/>
             </div>
-            <button class="btn btn_red" type="submit">Save</button>
+            <div class="field">
+              <input class="form_control" type="text" value="New password (once again)"/>
+            </div>
+            <div class="field">
+              <button class="btn btn_red" type="submit">Change password</button>
+            </div>
           </form>
         </div>
       </div>

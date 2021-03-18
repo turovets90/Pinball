@@ -50,4 +50,7 @@ header
     .row
         .col
             a(href="#")
-                img(src="img/examples/top_banner.png")
+                if page.title==='404'
+                    img(src="img/examples/top_banner2.png")
+                else
+                    img(src="img/examples/top_banner.png")

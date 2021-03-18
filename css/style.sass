@@ -432,6 +432,16 @@ header
       background: $blue
       color: #fff
 
+  &.b_black
+    border: 1px solid #404046
+    color: #404046
+    background: none
+    font-weight: 700
+    &:hover
+      background: #D2D2D7
+      border: 1px solid #D2D2D7
+      color: #404046
+
   &.btn_green
     border: 1px solid $green
     color: #fff
@@ -2576,5 +2586,253 @@ table
   margin-bottom: 18px
   padding-top: 0
 
+.blue
+  color: $blue !important
+
+.main_right
+  p
+    font-size: 18px
+    line-height: 21px
+    color: #74747D
+    font-weight: 400
+    @media (max-width: 1380px)
+      font-size: 16px
+      line-height: 1.2
+    @media (max-width: 767px)
+      font-size: 14px
 
 
+.form_security
+  max-width: 380px
+  padding: 10px 0
+  .field
+    margin-bottom: 24px
+    @media (max-width: 1380px)
+      margin-bottom: 20px
+    @media (max-width: 767px)
+      margin-bottom: 15px
+    .form_control
+      background: #F1F3F6
+
+.content_404
+  text-align: center
+  padding-bottom: 50px
+  @media (max-width: 1100px)
+    padding-bottom: 30px
+  p
+    color: #404046
+    font-size: 24px
+    font-weight: 300
+    line-height: 28px
+    @media (max-width: 1380px)
+      font-size: 22px
+    @media (max-width: 1200px)
+      font-size: 20px
+      line-height: 1.2
+    @media (max-width: 767px)
+      font-size: 18px
+    @media (max-width: 575px)
+      font-size: 16px
+.title_404
+  font-size: 500px
+  line-height: 1
+  color: $blue
+  font-weight: 700
+  @media (max-width: 1380px)
+    font-size: 450px
+  @media (max-width: 1200px)
+    font-size: 430px
+  @media (max-width: 1100px)
+    font-size: 350px
+  @media (max-width: 767px)
+    font-size: 300px
+  @media (max-width: 575px)
+    font-size: 180px
+
+.d_hide
+  @media (min-width: 1101px)
+    display: none !important
+
+.mfp-container
+  .modal_window
+    display: block
+.modal_window
+  display: none
+  background: #fff
+  margin: auto
+  padding: 20px 50px 50px
+  position: relative
+  @media (max-width: 1380px)
+    padding: 20px 30px 30px
+  @media (max-width: 1100px)
+    padding: 20px 20px 30px
+  &.small
+    max-width: 488px
+  &.middle
+    max-width: 540px
+  &.large
+    max-width: 662px
+    .btn
+      max-width: 380px
+      margin: 10px auto auto
+  .btn_group
+    +flex
+    +ai-center
+    +j-beetween
+    max-width: 366px
+    margin: auto
+    .btn
+      width: 100%
+      max-width: 160px
+      @media (max-width: 575px)
+        max-width: 120px
+  > .mfp-close
+    width: 30px
+    height: 30px
+    left: 0
+    top: 0
+    right: initial
+    @media (min-width: 1101px)
+      display: none
+  .h2, h2
+    text-align: center
+    color: $blue
+    padding-top: 8px
+  form
+    .select2-container--default
+      .select2-selection--single
+        .select2-selection__arrow
+          background: #F1F3F6
+          b
+            border: 0
+            width: 11px
+            height: 9px
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='0.808736' y1='1.41183' x2='5.51411' y2='7.88172' stroke='%2374747D' stroke-width='2'/%3e%3cline y1='-1' x2='8' y2='-1' transform='matrix(-0.588172 0.808736 0.808736 0.588172 10.8818 2)' stroke='%2374747D' stroke-width='2'/%3e%3c/svg%3e ")
+.modal_form
+  .btn
+    width: 100%
+    text-align: center
+  .field
+    margin-bottom: 15px
+    &.mb_10
+      margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+  label
+    font-weight: 700
+    margin-bottom: 7px
+  .col
+    width: 50%
+    .select2
+      width: 100% !important
+      max-width: 100% !important
+    .select2-container--default
+      .select2-selection--single
+        max-width: 100%
+    &:last-child
+      width: 100%
+      +flex
+      +j-center
+    @media (max-width: 767px)
+      width: 100%
+
+  .time_row
+    .form_control
+      &.center
+        text-align: center
+    .col
+      &:first-child
+        width: 58%
+
+      &:last-child
+        width: 42%
+
+
+.modal_title
+  +flex
+  +ai-end
+  +j-beetween
+  margin-bottom: 10px
+  &.mb
+    +j-center
+    margin-top: 20px
+    margin-bottom: 20px
+  .h1, h1
+    color: #404046
+    @media (max-width: 1380px)
+      padding-right: 20px
+
+
+.modal_subtitle
+  font-size: 18px
+  line-height: 21px
+  color: #74747D
+  margin-bottom: 28px
+
+  @media (max-width: 1380px)
+    font-size: 16px
+    line-height: 1.2
+    margin-bottom: 20px
+
+  @media (max-width: 767px)
+    font-size: 14px
+
+
+
+.checkbox
+  position: relative
+
+  input
+    position: absolute
+    opacity: 0
+    &:checked
+      + label
+        &:before
+          background: $red
+          border: 1px solid $red
+        &:after
+          opacity: 1
+    + label
+      color: #C3C6CE
+      font-size: 16px
+      font-weight: 400
+      position: relative
+      display: inline-block
+      padding-left: 23px
+      margin-bottom: 0
+
+      &:before
+        +b_a
+        left: 0
+        top: 0
+        bottom: 1px
+        margin: auto
+        width: 14px
+        height: 14px
+        border: 1px solid #E1E3EA
+        background: #F7F7F7
+      &:after
+        content: "\2714"
+        position: absolute
+        left: 2px
+        top: 0
+        bottom: 0
+        margin: auto
+        font-size: 12px
+        color: #fff
+        opacity: 0
+
+
+li.mb_20
+  margin-bottom: 20px
+
+
+.field
+  &.center
+    text-align: center
+    margin-bottom: 30px
+    .form_control
+      max-width: 286px
+      margin: auto
+      &.center
+        text-align: center

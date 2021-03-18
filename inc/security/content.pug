@@ -1,0 +1,41 @@
+.container.account_content
+    .row
+        .col.aside_left
+            .user_menu
+                .user_menu_header
+                    .user_photo(style="background-image:url(img/examples/Ellipse.png)")
+                    .user_name Matt Szewczyk
+                -var menu=['Settings','My stats','Schedule','Security','Logout'];
+                .user_menu_body
+                    ul.nav
+                        for user_nav_item, index in menu
+                            if user_nav_item===page.title
+                                li.active
+                                    a(href="#")=user_nav_item
+                            else
+                                li
+                                    a(href="#")=user_nav_item
+
+        .col.main_right
+            .h1.page_title My Account
+
+            .h2.page_subtitle Important information
+            p At this page you can change your password. If you don't remember your old password you can't create new one. You need to contact the administrator of the web-site by e-mail: help@pinball.com.
+            p.blue
+                strong Password must contains at least 1 letter, a number or symbol, at least 6 characters.
+
+            form.form_security
+                .field
+                    input.form_control(type="text" value="Old password")
+                .field
+                    input.form_control(type="text" value="New password")
+                .field
+                    input.form_control(type="text" value="New password (once again)")
+                .field
+                    button.btn.btn_red(type="submit") Change password
+
+
+
+
+
+

@@ -44,6 +44,12 @@ $(document).ready(function(){
         });
     });
 
+    $('.popup-with-form').magnificPopup({
+        removalDelay: 300,
+    });
+
+    $('.time').mask('00:00');
+
 });
 
 
