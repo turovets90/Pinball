@@ -11,6 +11,8 @@ $(document).ready(function(){
         minimumResultsForSearch: -1
     });
 
+    $('select.custom_select.readonly').prop("disabled", true);
+
     $('.switcher_wrapper').click(function(){
         $(this).parent().toggleClass('act');
         $('.switcher_tabs').toggleClass('act');

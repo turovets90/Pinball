@@ -54,40 +54,42 @@
                                                     button.btn.b_pink.game_item_toggle Change
 
                                             .game_item_body
-                                                .game_item_body_title.h2 Please check the entered data very carefully before saving it
-                                                .game_row
-                                                    .game_row_left
-                                                        .highscore
-                                                            div
-                                                                .highscore_title HIGHSCORE
-                                                                .player_name Matt Szewczyk
-                                                                .result 1,308,494,420
+                                                .game_item_body_content
 
-                                                    .game_row_center
-                                                        .games_list
-                                                            .games_list_item.first
-                                                                .col_left Matt Szevczyk
-                                                                .col_center
-                                                                .col_right Liv Tyler
-                                                            -for(var i=1;i<=3;i++)
-                                                                .games_list_item
-                                                                    .col_left
-                                                                        input.form_control(value="Score")
-                                                                    .col_center Game #{i}
-                                                                    .col_right
-                                                                        input.form_control(value="Score")
+                                                    .game_item_body_title.h2 Please check the entered data very carefully before saving it
+                                                    .game_row
+                                                        .game_row_left
+                                                            .highscore
+                                                                div
+                                                                    .highscore_title HIGHSCORE
+                                                                    .player_name Matt Szewczyk
+                                                                    .result 1,308,494,420
+
+                                                        .game_row_center
+                                                            .games_list
+                                                                .games_list_item.first
+                                                                    .col_left Matt Szevczyk
+                                                                    .col_center
+                                                                    .col_right Liv Tyler
+                                                                -for(var i=1;i<=3;i++)
+                                                                    .games_list_item
+                                                                        .col_left
+                                                                            input.form_control(value="Score")
+                                                                        .col_center Game #{i}
+                                                                        .col_right
+                                                                            input.form_control(value="Score")
 
 
-                                                    .game_row_right
-                                                        .highscore
-                                                            div
-                                                                .highscore_title HIGHSCORE
-                                                                .player_name Liv Tyler
-                                                                .result 780,000,000
-                                                .game_btn_box
-                                                    button.btn.b_red Delete this game
-                                                    button.btn.btn_red Save
-                                                    button.btn.b_blue Change game details
+                                                        .game_row_right
+                                                            .highscore
+                                                                div
+                                                                    .highscore_title HIGHSCORE
+                                                                    .player_name Liv Tyler
+                                                                    .result 780,000,000
+                                                    .game_btn_box
+                                                        button.btn.b_red Delete this game
+                                                        button.btn.btn_red Save
+                                                        button.btn.b_blue Change game details
 
                     .pagination
                          ul.nav

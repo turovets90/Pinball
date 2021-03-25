@@ -24,17 +24,17 @@
                     .col
                         .fields_group
                             .field
-                                input.form_control(placeholder="Your first name *" value="Matt")
+                                input.form_control(placeholder="Your first name *" value="Matt" readonly)
                             .field
-                                input.form_control(placeholder="Your last name *" value="Szewczyk")
+                                input.form_control(placeholder="Your last name *" value="Szewczyk" readonly)
                             .field
-                                input.form_control(placeholder="Your middle name" value="Janiak")
+                                input.form_control(placeholder="Your middle name" value="Janiak" readonly)
                     .col
                         .fields_group
                             .field
-                                input.form_control(placeholder="Your e-mail *" value="mattszewczyk34@gmail.com")
+                                input.form_control(placeholder="Your e-mail *" value="mattszewczyk34@gmail.com" readonly)
                             .field
-                                input.form_control(placeholder="Your phone number" value="+1 983 872 836")
+                                input.form_control(placeholder="Your phone number" value="+1 983 872 836" readonly)
                 .row.personal_information_row
                     .col
                         .fields_group
@@ -42,10 +42,10 @@
                             .row.small_group
                                 .col
                                     .field
-                                        input.form_control(placeholder="Day" value="10")
+                                        input.form_control(placeholder="Day" value="10" readonly)
                                 .col
                                     .field
-                                        select.custom_select
+                                        select.custom_select.readonly
                                             option Month
                                             -for (var s = 1; s <= 12; s++)
                                                 if s===3
@@ -54,11 +54,11 @@
                                                     option  #{s}
                                 .col
                                     .field
-                                        input.form_control(placeholder="Year" value="1985")
+                                        input.form_control(placeholder="Year" value="1985" readonly)
                         .fields_group
                             label Where are you from
                             .field
-                                input.form_control(placeholder="Town" value="Dallas")
+                                input.form_control(placeholder="Town" value="Dallas" readonly)
                     .col
                         .fields_group
                             label Your social life
